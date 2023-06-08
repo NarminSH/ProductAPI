@@ -6,7 +6,7 @@ using ProductAPI.Utilities;
 
 namespace ProductAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/[controller]")]
     [ApiController]
     public class RestaurantsController : ControllerBase
     {

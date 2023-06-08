@@ -7,6 +7,7 @@ using ProductAPI.Services.Implementations.Restaurant;
 using ProductAPI.Services.Interfaces;
 using ProductAPI.Services.Interfaces.BaseService;
 using ProductAPI.Services.Interfaces.ProductService;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,7 @@ builder.Services.AddDbContext<AppDbContext>(
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IRestaurantService, RestaurantService>();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 
